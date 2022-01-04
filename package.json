@@ -1,0 +1,26 @@
+{
+  "name": "iso6709-to-dms",
+  "version": "1.0.0",
+  "description": "A non standards compliant module to convert ISO6709 points to decimal degrees",
+  "main": "iso2dec.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha -r esm --exit"
+  },
+  "keywords": [
+    "iso6709",
+    "decimal degrees",
+    "position",
+    "points"
+  ],
+  "author": "Sam Wilson",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "dms2dec": "^1.1.0"
+  },
+  "devDependencies": {
+    "chai": "*",
+    "esm": "^3.2.25",
+    "mocha": "*"
+  }
+}
