@@ -12,13 +12,13 @@ const latlngdm = new RegExp(/(?<latRef>[+-])(?<latD>[0-9]{2})(?<latM>[0-9]{2}\.[
 const latlngdms = new RegExp(/(?<latRef>[+-])(?<latD>[0-9]{2})(?<latM>[0-9]{2})(?<latS>[0-9]{2}\.[0-9]+)(?<lonRef>[+-])(?<lonD>[0-9]{3})(?<lonM>[0-9]{2})(?<lonS>[0-9]{2}\.[0-9]+)/);
 // Latitude, Longitude (in Degrees) and Altitude:
 //     ±DD.DDDD±DDD.DDDD±AAA.AAA         (eg +12.345-098.765+15.9)
-const latlngdalt = new RegExp(/(?<latRef>[+-])(?<latD>[0-9]{2}\.[0-9]+)(?<lonRef>[+-])(?<lonD>[0-9]{3}\.[0-9]+)(?<altitude>[+-][0-9]{1,3}\.[0-9]+)/);
+const latlngdalt = new RegExp(/(?<latRef>[+-])(?<latD>[0-9]{2}\.[0-9]+)(?<lonRef>[+-])(?<lonD>[0-9]{3}\.[0-9]+)(?<altitude>[+-][0-9]{1,4}\.[0-9]+)/);
 // Latitude, Longitude (in Degrees and Minutes) and Altitude:
 //     ±DDMM.MMMM±DDDMM.MMMM±AAA.AAA     (eg +1234.56-09854.321+15.9)
 const latlngdmalt = new RegExp(/(?<latRef>[+-])(?<latD>[0-9]{2})(?<latM>[0-9]{2}\.[0-9]+)(?<lonRef>[+-])(?<lonD>[0-9]{3})(?<lonM>[0-9]{2}\.[0-9]+)(?<altitude>[+-][0-9]{1,3}\.[0-9]+)/)
 // Latitude, Longitude (in Degrees, Minutes and Seconds) and Altitude:
 //     ±DDMMSS.SSSS±DDDMMSS.SSSS±AAA.AAA (eg +123456.7-0985432.1+15.9)
-const latlngdmsalt = new RegExp(/(?<latRef>[+-])(?<latD>[0-9]{2})(?<latM>[0-9]{2})(?<latS>[0-9]{2}\.[0-9]+)(?<lonRef>[+-])(?<lonD>[0-9]{3})(?<lonM>[0-9]{2})(?<lonS>[0-9]{2}\.[0-9]+)(?<altitude>[+-][0-9]{1,3}\.[0-9]+)/);
+const latlngdmsalt = new RegExp(/(?<latRef>[+-])(?<latD>[0-9]{2})(?<latM>[0-9]{2})(?<latS>[0-9]{2}\.[0-9]+)(?<lonRef>[+-])(?<lonD>[0-9]{3})(?<lonM>[0-9]{2})(?<lonS>[0-9]{2}\.[0-9]+)(?<altitude>[+-][0-9]{1,4}\.[0-9]+)/);
 
 export function iso2dec(string){
     switch(true) {
